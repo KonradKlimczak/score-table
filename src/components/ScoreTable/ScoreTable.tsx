@@ -36,6 +36,7 @@ export default function SimpleTable() {
 
   return (
     <Paper className={classes.root}>
+        card
       <Table className={classes.table} aria-label='simple table'>
         <TableHead>
           <TableRow>
@@ -61,7 +62,7 @@ export default function SimpleTable() {
         </TableBody>
       </Table>
       <FirestoreCollection
-        path='scores'
+        path='season'
         render={({ isLoading, data }: any) => {
           return isLoading ? (
             <p>Loading</p>
@@ -71,7 +72,7 @@ export default function SimpleTable() {
               <ul>
                 {data.map((story: any) => (
                   <li key={story.id}>
-                    {story.title} - {story.authorName}
+                    {story.konrad} - {story.authorName}
                   </li>
                 ))}
               </ul>

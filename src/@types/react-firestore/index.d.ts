@@ -4,6 +4,7 @@ declare module 'react-firestore' {
 
   export interface IFirestoreCollectionProps {
     path: string;
+    sort?: string;
     render(args: any): React.ReactNode;
   }
   export class FirestoreCollection extends React.Component<IFirestoreCollectionProps> {}
