@@ -1,15 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
 
-import { firebase } from '@firebase/app';
-import '@firebase/firestore';
-import { FirestoreProvider } from 'react-firestore';
+import { firebase } from "@firebase/app";
+import "@firebase/firestore";
+import { FirestoreProvider } from "react-firestore";
 
-var firebaseConfig = {
-};
+var firebaseConfig = {};
 
 firebase.initializeApp(firebaseConfig);
 
@@ -17,7 +16,7 @@ ReactDOM.render(
   <FirestoreProvider firebase={firebase}>
     <App />
   </FirestoreProvider>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
