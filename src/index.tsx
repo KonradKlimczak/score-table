@@ -4,14 +4,14 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import firebase from '@firebase/app';
+import { firebase } from '@firebase/app';
 import '@firebase/firestore';
 import { FirestoreProvider } from 'react-firestore';
 
-const config = {
+var firebaseConfig = {
 };
 
-firebase.initializeApp(config);
+firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <FirestoreProvider firebase={firebase}>
