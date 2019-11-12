@@ -1,10 +1,10 @@
+import { Card, CircularProgress } from '@material-ui/core';
 import React from 'react';
+import { FirestoreCollection } from 'react-firestore';
 import './App.css';
 import AppBar from './components/AppBar/AppBar';
-import ScoreTable from './components/ScoreTable/ScoreTable';
-import { makeStyles, CircularProgress } from '@material-ui/core';
+import { MatchList } from './components/MatchList';
 import { SeasonCard } from './components/SeasonCard';
-import { FirestoreCollection } from 'react-firestore';
 import { ISeason } from './utils/types';
 
 const App: React.FC = () => {
@@ -19,6 +19,7 @@ const App: React.FC = () => {
   return (
     <FirestoreCollection<ISeason[]>
       path='seasons'
+      
       render={({ isLoading, data }) => {
         if (isLoading) {
           return (
@@ -33,7 +34,9 @@ const App: React.FC = () => {
             <AppBar />
             <div className='Dashboard'>
               <SeasonCard winner={winner} looser={looser} />
-              <SeasonCard winner={winner} looser={looser} />
+              <Card>
+                <MatchList />
+              </Card>
               <SeasonCard winner={winner} looser={looser} />
               <SeasonCard winner={winner} looser={looser} />
             </div>
