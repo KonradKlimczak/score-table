@@ -11,7 +11,7 @@
     "@types/node": "12.12.3",
     "@types/react": "16.9.11",
     "@types/react-dom": "16.9.3",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "firestore": "^1.1.6",
     "path": "^0.12.7",
     "react": "^16.11.0",
